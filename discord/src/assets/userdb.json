@@ -33,10 +33,32 @@
             "state":""
         }
     ],
-        "servers": [{
-            "id":"",
-            "name": "",
-            "avatar": ""
-        }] 
-    }
+        "servers": [
+                {
+                  "id": "6526617ed677d55a040a8334",
+                  "name": "Jillian_Cherry",
+                  "avatar": "http://placehold.it/32x32"
+                },
+                {
+                  "id": "6526617ef8fd980d5a20d2f2",
+                  "name": "Shauna_Copeland",
+                  "avatar": "http://placehold.it/32x32"
+                },
+                {
+                  "id": "6526617e065a4fbe47ef25ca",
+                  "name": "Corinne_Donovan",
+                  "avatar": "http://placehold.it/32x32"
+                },
+                {
+                  "id": "6526617e8276c725869e5374",
+                  "name": "Dale_Mcdowell",
+                  "avatar": "http://placehold.it/32x32"
+                },
+                {
+                  "id": "6526617eefe57624786282ff",
+                  "name": "Roberts_Schultz",
+                  "avatar": "http://placehold.it/32x32"
+                }
+              ]
+        }
 }
