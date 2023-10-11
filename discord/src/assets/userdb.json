@@ -1,12 +1,12 @@
 {"User": 
     {
         "id":"1",
-        "name": "nombre",
-        "username": "nombreUsuario",
-        "avatar": "https://www.eluniverso.com/resizer/FB1Rqc1f_LaS7q5J44TB2b-uGb4=/893x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/5TPHTZQOG5HOZAO4GHC52FWJJQ.jpg",
-        "email": "correo@mail.com",
-        "phone": "666555444",
-        "state":"off",
+        "name": "name",
+        "username": "user1",
+        "avatar": "https://es.aap.eu/wp-content/uploads/sites/6/2023/05/Cuidados-del-erizo.jpg",
+        "email": "",
+        "phone": "",
+        "state":"onLine",
         "friends": [{
             "id":"",
             "name": "",
