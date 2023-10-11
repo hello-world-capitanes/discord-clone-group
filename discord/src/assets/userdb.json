@@ -1,0 +1,42 @@
+{"User": 
+    {
+        "id":"",
+        "name": "",
+        "username": "",
+        "avatar": "",
+        "email": "",
+        "phone": "",
+        "state":"",
+        "friends": [{
+            "id":"",
+            "name": "",
+            "username": "",
+            "avatar": "",
+            "email": "",
+            "phone": "",
+            "state":""
+        }, {
+            "id":"",
+            "name": "",
+            "username": "",
+            "avatar": "",
+            "email": "",
+            "phone": "",
+            "state":""
+        }, {
+            "id":"",
+            "name": "",
+            "username": "",
+            "avatar": "",
+            "email": "",
+            "phone": "",
+            "state":""
+        }
+    ],
+        "servers": [{
+            "id":"",
+            "name": "",
+            "avatar": ""
+        }] 
+    }
+}
