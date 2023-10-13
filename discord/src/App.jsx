@@ -7,8 +7,6 @@ import ServerDetail from './pages/server/ServerDetail'
 
 function App() {
 
-  const {user, changeState} = useContext(UserContext) 
-
   return (
     <Routes>
       <Route path='/' element={<Parent/>} />
