@@ -1,0 +1,37 @@
+
+.NavBarMenuServer__nav{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    border-bottom: 1px black inset;
+}
+
+.NavBarMenuServer__nav__input{
+    display: flex;
+    justify-content: center;
+    background-color: #222428;
+    border-right: 1px black inset
+}
+
+
+
+.NavBarMenuServer__nav__menu{
+    display:flex;
+    list-style: none;
+    justify-content: start;
+    background-color: #36393f;
+    padding: 15px;
+    
+}
+.NavBarMenuServer__nav__menu >li {
+    gap: 15;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+
+.NavBarMenuServer__nav__leftmenu{
+    display: flex;
+    gap:5%;
+    justify-content: stretch;
+    background-color: #36393f;
+}

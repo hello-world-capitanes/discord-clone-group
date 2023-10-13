@@ -1,0 +1,36 @@
+.SideBarMenuServer__container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+    border: 1px black inset;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-top: 10px
+}
+
+.SideBarMenuServer__container__input >input{
+    background-color: #222428;
+    border-radius: 5px;
+    height: 30px;
+    width: 12vw;
+
+}
+
+.SideBarMenuServer__container__input >input::placeholder{
+    text-align: center;
+}
+.SideBarMenuServer__container__menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.SideBarMenuServer__container__menu >li{
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    text-justify: center;
+    cursor: pointer;
+}
