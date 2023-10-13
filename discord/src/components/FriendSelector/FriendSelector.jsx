@@ -1,13 +1,14 @@
 import './index.css'
-import userData from '../../assets/userdb.json'
 import useForm from './useForm'
 import Image from '../Image/Image'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { UserContext } from '../../context/UserContext'
 function FriendSelector() {
     const { isSelected, canSelectMore, toSelect, handleOnChangeForm, handleSubmit } = useForm()
-    const userFriends = userData.User.friends
+    const {user} = useContext(UserContext)
+    const userFriends = user.friends
     const [text, setText] = useState("")
-    const [actualFriends, setFriends] = useState(userData.User.friends)
+    const [actualFriends, setFriends] = useState(userFriends)
 
     function filterByUsername(text) {
         setFriends(userFriends.filter((ele) => ele.username.toUpperCase().startsWith(text.toUpperCase())))
