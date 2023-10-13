@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Button from '../../components/button/Button';
 import { useNavigate } from 'react-router-dom';
 import discord from '../../assets/discord.svg'
+import MensajesDirectos from '../../components/mensajes-directos/MensajesDirectos';
 
 const Parent = () => {
 
@@ -46,6 +47,7 @@ const Parent = () => {
         {button}
       </div>
       <div className='menuPanel'>
+        <MensajesDirectos></MensajesDirectos>
       </div>
       <div className='nestedRoutes'>
         <Outlet />
