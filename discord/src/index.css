@@ -50,7 +50,22 @@
     background-color: var(--grey);
 }
 
-.blue {
+.nestedRoutes {
     width: 100vw;
     background-color: var(--lightGrey);
+}
+
+.serverDetail_container {
+    padding: 1rem 2rem;
+}
+
+.serverTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.serverTitle img {
+    border-radius: 100%;
+    margin: 1rem;
 }
