@@ -2,7 +2,6 @@
     background-color:#111214;
     color:white;
     width: 370px;
-    height: 395px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -59,4 +58,12 @@
 .containerMembers{
     display:flex;
     flex-direction: row;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.indicadorMiembros{
+    margin-right: 20px;
+    margin-left:5px;
+    font-size: 14px;
 }

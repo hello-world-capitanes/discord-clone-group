@@ -24,8 +24,20 @@ function Card(){
                 <p className="description">{datosCard.description}</p>
 
                 <div className="containerMembers">
-                    <p>{datosCard.onLineMembers} en línea</p>
-                    <p>{datosCard.members} miembros</p>
+                    <div className='circulo' style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: 'green',
+                    }}/>
+                    <p className='indicadorMiembros'>{datosCard.onLineMembers} en línea</p>
+                    <div className='circulo' style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: 'grey',
+                    }}/>
+                    <p className='indicadorMiembros'>{datosCard.members} miembros</p>
                 </div>
             </div>
             
