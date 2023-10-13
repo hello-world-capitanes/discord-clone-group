@@ -7,31 +7,61 @@
         "email": "",
         "phone": "",
         "state":"",
-        "friends": [{
-            "id":"",
-            "name": "",
-            "username": "",
-            "avatar": "",
-            "email": "",
-            "phone": "",
-            "state":""
-        }, {
-            "id":"",
-            "name": "",
-            "username": "",
-            "avatar": "",
-            "email": "",
-            "phone": "",
-            "state":""
-        }, {
-            "id":"",
-            "name": "",
-            "username": "",
-            "avatar": "",
-            "email": "",
-            "phone": "",
-            "state":""
-        }
+        "friends": [  
+            {
+            "id": "652660b49a363cc2679593e1",
+            "name": "Le Page",
+            "username": "Earline",
+            "state": "busy",
+            "avatar": "http://placehold.it/32x32",
+            "email": "earlinepage@crustatia.com",
+            "phone": "+34 (825) 441-3410"
+          },
+          {
+            "id": "652660b4eda1556f58a9527e",
+            "name": "Milagros Emerson",
+            "username": "Massey",
+            "state": "disconnected",
+            "avatar": "http://placehold.it/32x32",
+            "email": "masseyemerson@crustatia.com",
+            "phone": "+34 (879) 487-2443"
+          },
+          {
+            "id": "652660b4cdcf426b0e7e4c26",
+            "name": "Simmons Rollins",
+            "username": "Dale",
+            "state": "connected",
+            "avatar": "http://placehold.it/32x32",
+            "email": "dalerollins@crustatia.com",
+            "phone": "+34 (976) 491-2307"
+          },
+          {
+            "id": "652660b43fb57a10c3c2c5c4",
+            "name": "Joni Sawyer",
+            "username": "Skinner",
+            "state": "busy",
+            "avatar": "http://placehold.it/32x32",
+            "email": "skinnersawyer@crustatia.com",
+            "phone": "+34 (995) 451-2166"
+          },
+          {
+            "id": "652660b4028cfff483973894",
+            "name": "Camille Browning",
+            "username": "Trudy",
+            "state": "busy",
+            "avatar": "http://placehold.it/32x32",
+            "email": "trudybrowning@crustatia.com",
+            "phone": "+34 (853) 454-3187"
+          },
+          {
+            "id": "652660b4716a86c103448136",
+            "name": "Spears Lowe",
+            "username": "Adrian",
+            "state": "afk",
+            "avatar": "http://placehold.it/32x32",
+            "email": "adrianlowe@crustatia.com",
+            "phone": "+34 (986) 432-3842"
+          }
     ],
         "servers": [{
             "id":"",
