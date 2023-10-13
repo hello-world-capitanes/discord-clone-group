@@ -11,14 +11,13 @@ const MensajesDirectos = () => {
 
   const [contextMenu, setContextMenu] = useState()
 
-  const { user, changeState } = useContext(UserContext)
+  const { user } = useContext(UserContext)
 
   const mensajesDirectos = user.friends
 
   const handleContextMenu = (e, friend) => {
     e.preventDefault()
     setContextMenu({ friend, x: e.clientX, y: e.clientY })
-    changeState(mensajesDirectos.state)
   }
 
   const closeContextMenu = (e) => {
