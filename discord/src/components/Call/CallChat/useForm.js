@@ -14,8 +14,14 @@ function useForm(initialValue = {
         setForm(newText) 
         
     }
+    function clearForm() {
+        const newText = {
+            text: ""
+        }
+        setForm(newText)
+    }
 
-    return { form, handleOnChangeForm }
+    return { form, handleOnChangeForm, clearForm }
 }
 
 export default useForm

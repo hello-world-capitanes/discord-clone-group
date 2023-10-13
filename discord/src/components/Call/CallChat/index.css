@@ -1,16 +1,23 @@
 .chat-container {
     background-color: #2c2f33;
+    .mensajes-container {
+        list-style-type: none;
+        color:aliceblue;
+    }
     .send-container{
         display: flex;
         justify-content: center;
         background-color: #36393f;
-        .input {
-            border-radius: 5px;
-            padding: 10px;
-            background-color: #36393f;
+        .form {
             width: 70%;
-            color:#ffffff;
-            border: none;
+            .input {
+                width: 70%;
+                border-radius: 5px;
+                padding: 10px;
+                background-color: #36393f;
+                color:#ffffff;
+                border: none;
+            }
         }
         .redondo {
             cursor: pointer;
