@@ -1,0 +1,62 @@
+.tarjeta{
+    background-color:#111214;
+    color:white;
+    width: 370px;
+    height: 395px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerHeader{
+    height: 175px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.imageHeader{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+.containerAvatar{
+    position:absolute;
+    top: 148px;
+    left:28px;
+    height: 57px;
+    width: 57px;
+    z-index: 2;
+    background-color: antiquewhite;
+    background-color:#111214;
+    border-radius:15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageAvatar{
+    height: 82%;
+    width: 82%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.separador{
+    height: 20px;
+}
+
+.infoContainer{
+    padding-left: 15px;
+    padding-top: 25px;
+}
+
+.description{
+    padding-top: 0px;
+}
+
+.containerMembers{
+    display:flex;
+    flex-direction: row;
+}
