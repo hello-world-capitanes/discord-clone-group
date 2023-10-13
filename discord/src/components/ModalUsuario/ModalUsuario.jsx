@@ -1,11 +1,11 @@
 import './ModalUsuario.css'
 import ModalEstadoUsuario from '../ModalEstadoUsuario/ModalEstadoUsuario'
-import defaultUser from '../../assets/userdb.json'
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import{Smile,Repeat, ChevronRight} from 'react-feather'
+import { UserContext } from '../../context/UserContext'
 
 function ModalUsuario(){
-    const [estado, setEstado]=useState(defaultUser.User.state)
+    const {user}=useContext(UserContext)
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const openModal = () => {
@@ -21,7 +21,7 @@ function ModalUsuario(){
     }
 
     const mostrarEstado = () => {
-      switch(estado){
+      switch(user.state){
         case "onLine":
             return "En Línea"
         case "off":
@@ -39,24 +39,24 @@ function ModalUsuario(){
         <div className="tarjetaUsuario">
             <div className="headerTarjeta"/>
             <div className="contenedorImagen">
-                <img className="avatarUsuario" src={defaultUser.User.avatar}/>
+                <img className="avatarUsuario" src={user.avatar}/>
                 <div className="contenedorEstado">
-                    <div className={`indicadorEstadoPerfil ${estado}`}/>
+                    <div className={`indicadorEstadoPerfil ${user.state}`}/>
                 </div>
             </div>
             <div className='contenedorInfo'>
-                <p>{defaultUser.User.name}</p>
-                <p><strong>{defaultUser.User.username}</strong></p>
+                <p>{user.name}</p>
+                <p><strong>{user.username}</strong></p>
                 <hr/>
                 <p><strong>MIEMBRO DE DISCORD DESDE</strong></p>
                 <p>1 ene 2018</p>
                 <hr/>
                 <div className={`contenedorInteractivo ${modalIsOpen? "activo": ""}`} onClick={openModal}>
-                    <div className={`circuloEstado ${estado}`}/>
+                    <div className={`circuloEstado ${user.state}`}/>
                     <span>{mostrarEstado()}</span>
                     <ChevronRight className='iconoDerecha'/>
                 </div>
-                <ModalEstadoUsuario isOpen={modalIsOpen} closeModal={closeModal} changeState={changeState}/>
+                <ModalEstadoUsuario isOpen={modalIsOpen} closeModal={closeModal}/>
                 <div className="contenedorInteractivo">
                     <Smile className='iconoIzquierda'/>
                     <span>Establecer estado personalizado</span>

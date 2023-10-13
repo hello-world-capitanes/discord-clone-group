@@ -4,8 +4,8 @@
         "name": "name",
         "username": "user1",
         "avatar": "https://es.aap.eu/wp-content/uploads/sites/6/2023/05/Cuidados-del-erizo.jpg",
-        "email": "",
-        "phone": "",
+        "email": "mail@email.com",
+        "phone": "666555444",
         "state":"onLine",
         "friends": [{
             "id":"",

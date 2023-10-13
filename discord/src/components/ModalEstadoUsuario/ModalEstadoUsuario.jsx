@@ -1,7 +1,13 @@
 import React from 'react';
 import './ModalEstadoUsuario.css'
-function ModalEstadoUsuario({ isOpen, closeModal, changeState}) {
+import { useContext } from 'react'
+import { UserContext } from '../../context/UserContext'
+
+
+function ModalEstadoUsuario({ isOpen, closeModal}) {
   if (!isOpen) return null;
+
+  const {changeState}=useContext(UserContext)
 
   function cambiarEstado(newState){
     changeState(newState)
@@ -12,7 +18,7 @@ function ModalEstadoUsuario({ isOpen, closeModal, changeState}) {
     <div className="modal" onMouseLeave={()=>closeModal()}>
         <div className="selectorEstado" onClick={()=>cambiarEstado("onLine")} >
             <div className={`circuloEstado onLine`}/>
-            <span>En Linea</span>
+            <span>En Línea</span>
         </div>
         <hr/>
         <div className="selectorEstado" onClick={()=>cambiarEstado("ausent")}>
@@ -23,14 +29,14 @@ function ModalEstadoUsuario({ isOpen, closeModal, changeState}) {
             <div className={`circuloEstado off ` }/>
             <div>
                 <span>Desconectado</span>
-                <p>No recibirás ninguna notificación de escritorio.</p>
+                <p className="textoBajoEstado">No recibirás ninguna notificación de escritorio.</p>
             </div>
         </div>
         <div className="selectorEstado" onClick={()=>cambiarEstado("invisible")}>
             <div className={`circuloEstado invisible`}/>
             <div>
                 <span>Invisible</span>
-                <p>No aparecer-as en línea, pero tendrás acceso total a Discord.</p>
+                <p className="textoBajoEstado">No aparecerás en línea, pero tendrás acceso total a Discord.</p>
             </div>
         </div>
     </div>
