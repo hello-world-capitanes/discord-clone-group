@@ -7,17 +7,34 @@ const ServerDetail = () => {
     const user = serverBtn.User;
     const server = user.servers;
     const { serverid } = useParams()
-    const [selectedServer, setSelectedServer] = useState([])
+    const [selectedServer, setSelectedServer] = useState({
+        "id": "6526617ed677d55a040a8334",
+        "name": "Jillian_Cherry",
+        "avatar": "https://picsum.photos/32/32"
+      })
+    const [avatar, setAvatar] = useState('')
+    const [name, setName] = useState('')
 
     useEffect(() => {
         if(serverid) {
             const findServer = server.find((item) => item.id === serverid)
             setSelectedServer(findServer)
         }
-    }, [serverid, server])
+    }, [serverid])
 
-    const avatar = selectedServer.avatar
-    const name = selectedServer.name.replace('_', ' ')
+    useEffect(() => {
+
+        console.log('selectedServer', selectedServer);
+
+        if(selectedServer) {
+            setAvatar(selectedServer.avatar);
+            setName(selectedServer.name.replace('_', ' '))
+        }
+
+    }, [selectedServer])
+
+    console.log('primero', server[0])
+    console.log('selected',selectedServer)
 
   return (
     <div className='serverDetail_container'>
