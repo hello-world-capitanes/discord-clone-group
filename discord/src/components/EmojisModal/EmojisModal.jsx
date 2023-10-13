@@ -47,9 +47,9 @@ const EmojisModal = ({ isModalActive, setIsModalActive, setAddEmoji, initialMode
 
   const selectHandle = (event) => {
     if (mode === 'emoji') {
-      setAddEmoji({ content: event.target.innerText, type: 'emoji' });
+      setAddEmoji({ id: Date.now(), type: 'emoji', content: event.target.innerText });
     } else {
-      setAddEmoji({ content: event.target.src, type: 'image' });
+      setAddEmoji({ id: Date.now(), type: 'image', content: event.target.src });
     }
   };
 
