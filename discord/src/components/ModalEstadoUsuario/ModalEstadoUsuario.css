@@ -1,0 +1,57 @@
+hr{
+    width: 100%;
+    border: none; 
+    border-top: 0.1px solid;
+}
+
+.modal{
+    position:absolute;
+    right:-423px;
+    bottom: -90px;
+    background-color: #111214;
+    border-radius: 5px;
+    padding:10px;
+    color: #ffffff;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selectorEstado{
+    display:flex;
+    flex-direction: row;
+    padding:10px
+
+}
+
+.selectorEstado:hover{
+    background-color: #2c2f33;
+    border-radius:3px;
+}
+
+.circuloEstado{
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.circuloEstado.onLine{
+    background-color: green;
+}
+
+.circuloEstado.ausent{
+    background-color: yellow;
+}
+
+.circuloEstado.off{
+    background-color: red;
+}
+
+.circuloEstado.invisible{
+    background-color: grey;
+}
+
+.textoBajoEstado{
+    font-size: 14px;
+}
