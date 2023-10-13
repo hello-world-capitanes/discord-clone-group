@@ -31,7 +31,7 @@ function FriendSelector() {
                         actualFriends.map((element) =>
                             <li key={element.id} className='friends-element'>
                                 <div className='contact-info'>
-                                    <Image className="avatar" link={element.avatar} title={`Avatar de ${element.username}`} />
+                                    <Image link={element.avatar} title={`Avatar de ${element.username}`} />
                                     <div className='name'>
                                         {element.username}
                                     </div>

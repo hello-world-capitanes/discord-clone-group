@@ -1,8 +1,8 @@
 function Image({className, link, title}) {
 
     return (
-      <div>
-        <img src={link} alt={title}/>
+      <div className="image-container">
+        <img style={{borderRadius:'150px'}} className="image" src={link} alt={title}/>
       </div>
     )
   }
