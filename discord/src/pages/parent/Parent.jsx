@@ -45,7 +45,8 @@ const Parent = () => {
         </Button>
         {button}
       </div>
-      <div className='menuPanel'></div>
+      <div className='menuPanel'>
+      </div>
       <div className='nestedRoutes'>
         <Outlet />
       </div>
