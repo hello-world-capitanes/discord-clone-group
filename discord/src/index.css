@@ -1,0 +1,72 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #23272a;
+    --grey: #2c2f33;
+    --lightGrey: #393a3c;
+}
+
+.parent {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.serverPanel {
+    width: 5vw;
+    min-width: 80px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.serverBtn {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.3rem;
+    border-radius: 100%;
+    border: none;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.serverBtn:hover {
+    border-radius: 35%;
+}
+
+.serverBtnAvatar {
+    width: 100%;
+}
+
+.menuPanel {
+    width: 20vw;
+    min-width: 200px;
+    background-color: var(--grey);
+}
+
+.nestedRoutes {
+    width: 100vw;
+    background-color: var(--lightGrey);
+}
+
+.serverDetail_container {
+    padding: 1rem 2rem;
+}
+
+.serverTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.serverTitle img {
+    border-radius: 100%;
+    margin: 1rem;
+}
+

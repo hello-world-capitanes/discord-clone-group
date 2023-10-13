@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 import { UserContextProvider } from './context/UserContext.jsx'
@@ -12,8 +13,8 @@ Modal.setAppElement(rootElement);
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <UserContextProvider>
+    <BrowserRouter>
       <App />
-    </UserContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 )
