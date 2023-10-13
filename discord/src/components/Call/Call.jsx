@@ -1,29 +1,20 @@
 import { useState } from 'react'
 import './index.css'
 import Image from '../Image/Image'
+import Button from '../Button/Button'
+import GifLogo from '../../assets/film.svg'
+import GiftLogo from '../../assets/gift.svg'
+import addLogo from '../../assets/plus-circle.svg'
+import emojiLogo from '../../assets/smile.svg'
+import imageLogo from '../../assets/image.svg'
+import CallFriends from './CallFriends/CallFriends'
+import CallChat from './CallChat/CallChat'
 function Call({ friends }) {
-    const [emojis, setEmojis] = useState([])
-    function addEmoji(emoji) {
-        setList(prevList => {
-            return [...prevList, emoji]
-        })
-    }
+
     return (
         <div className='call-container'>
-            <div className='friends-container'>
-                <ul className='friends-list'>
-                {
-                friends.map((element) => 
-                    <li className='friend-element' key={element.id}>
-                        <Image className="avatar" link={element.avatar} title={`Avatar de ${element.username}`}></Image>
-                    </li>
-                    )
-                }
-                </ul>
-            </div>
-            <div className='chat-container'>
-
-            </div>
+            <CallFriends friends={friends} />
+            <CallChat />
         </div>
     )
 }

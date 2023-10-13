@@ -6,10 +6,9 @@ import userData from './assets/userdb.json'
 import Call from './components/Call/Call'
 import { UserContext } from './context/UserContext'
 
-
 function App() {
-  const [count, setCount] = useState(0)
-  const userFriends = userData.User.friends
+  const {user} = useContext(UserContext) 
+  const userFriends = user.friends
   return (
     <>
       <Call friends={[userFriends[0], userFriends[1]]}/>
