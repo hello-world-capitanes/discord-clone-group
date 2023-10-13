@@ -6,17 +6,11 @@ import { UserContext } from '../../context/UserContext'
 function FriendSelector() {
     const { isSelected, canSelectMore, toSelect, handleOnChangeForm, handleSubmit } = useForm()
     const {user} = useContext(UserContext)
-    const userFriends = user.friends
     const [text, setText] = useState("")
-    const [actualFriends, setFriends] = useState(userFriends)
-
-    function filterByUsername(text) {
-        setFriends(userFriends.filter((ele) => ele.username.toUpperCase().startsWith(text.toUpperCase())))
-    }
+    let actualFriends = user.friends.filter((ele) => ele.username.toUpperCase().startsWith(text.toUpperCase()))
 
     function handleOnChangeFilter(event) {
         setText(event.target.value)
-        filterByUsername(event.target.value)
     }
 
     return (
