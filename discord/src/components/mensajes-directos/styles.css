@@ -4,8 +4,7 @@
     color: #99aab5;
     font-size: 12px;
     font-weight: 500;
-    padding: 10px;
-    height: 100vh;
+    height: 65vh;
   }
   
   .direct-message {
@@ -14,6 +13,7 @@
     margin-bottom: 10px;
     cursor: pointer;
     transition: background-color 0.2s;
+    margin: 30px
   }
   
   .title-messages {
@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin: 30px
   }
   
   .direct-message p {

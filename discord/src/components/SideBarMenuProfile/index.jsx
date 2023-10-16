@@ -5,10 +5,14 @@ import { FaUserFriends } from 'react-icons/fa'
 import { UserContext } from '../../context/UserContext'
 import { useContext, useState } from 'react'
 import { BiMicrophone } from 'react-icons/bi'
-import { BsMicMute } from 'react-icons/bs'
+import { BsMicMute, BsSoundwave } from 'react-icons/bs'
 import { CgHeadset } from 'react-icons/cg'
 import { FiSettings } from 'react-icons/fi'
 import { TbHeadsetOff } from 'react-icons/tb'
+
+import { LuPhoneMissed, LuPhoneOff } from 'react-icons/lu'
+
+
 import MensajesDirectos from '../mensajes-directos/MensajesDirectos'
 import {Opciones} from '../Opciones/Opciones'
 
@@ -18,6 +22,12 @@ export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
 
   const [micState, setMicState] = useState(true)
   const [headPhoneState, setHeadPhoneState] = useState(true)
+  const [closedCall, setClosedCall] = useState(false)
+
+  const closedCallFunction = ()=>{
+    setClosedCall(!closedCall)
+  }
+
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -58,11 +68,27 @@ export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
         </li>
       </menu>
 
-      <ul className="SideBarMenuServer__container__listfriends">
-        <MensajesDirectos></MensajesDirectos>
-      </ul>
+      
+      <MensajesDirectos></MensajesDirectos>
+      
 
       <div className="SideBarMenuServer__container__userControlls">
+        <div className='.SideBarMenuServer__container__userControlls__div div'>
+          <span style={{color : closedCall ? "red" : "green"}}>Voz conectada</span>
+          <div>
+            <BsSoundwave style={{cursor:"pointer"}}/>
+            {closedCall ? 
+            <LuPhoneMissed 
+              style={{cursor:"pointer"}} 
+              onClick={closedCallFunction}/> : 
+            <LuPhoneOff 
+              style={{cursor:"pointer"}}
+              onClick={closedCallFunction}/>}
+          </div>
+         
+        </div>
+
+        <section className='SideBarMenuServer__container__userControlls__section'>
         <div>
           <img
             style={{ borderRadius: '100%' }}
@@ -75,16 +101,16 @@ export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
         <ul>
           <li>
             {micState ? (
-              <BiMicrophone onClick={changeStateMic} size={20} />
+              <BiMicrophone style={{cursor:"pointer"}} onClick={changeStateMic} size={20} />
             ) : (
-              <BsMicMute onClick={changeStateMic} size={20} />
+              <BsMicMute style={{cursor:"pointer"}} onClick={changeStateMic} size={20} />
             )}
           </li>
           <li>
             {headPhoneState ? (
-              <CgHeadset onClick={changeStateHeadPhones} size={20} />
+              <CgHeadset style={{cursor:"pointer"}} onClick={changeStateHeadPhones} size={20} />
             ) : (
-              <TbHeadsetOff onClick={changeStateHeadPhones} size={20} />
+              <TbHeadsetOff style={{cursor:"pointer"}} onClick={changeStateHeadPhones} size={20} />
             )}
           </li>
           <li>
@@ -94,7 +120,9 @@ export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
             <Opciones modalIsOpen={modalIsOpen} closeModal={closeModal} />
           )}
         </ul>
+        </section> 
       </div>
+      
     </div>
   )
 }
