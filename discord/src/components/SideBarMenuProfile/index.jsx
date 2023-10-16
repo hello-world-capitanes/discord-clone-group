@@ -10,11 +10,25 @@ import { CgHeadset } from 'react-icons/cg'
 import { FiSettings } from 'react-icons/fi'
 import { TbHeadsetOff } from 'react-icons/tb'
 import MensajesDirectos from '../mensajes-directos/MensajesDirectos'
+import {Opciones} from '../Opciones/Opciones'
+
+
 export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
   const { user } = useContext(UserContext)
 
   const [micState, setMicState] = useState(true)
   const [headPhoneState, setHeadPhoneState] = useState(true)
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   const changeStateMic = () => {
     setMicState(!micState)
@@ -74,8 +88,11 @@ export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
             )}
           </li>
           <li>
-            <FiSettings size={20} />
+            <FiSettings size={20} onClick={openModal}/>
           </li>
+          {modalIsOpen && (
+            <Opciones modalIsOpen={modalIsOpen} closeModal={closeModal} />
+          )}
         </ul>
       </div>
     </div>

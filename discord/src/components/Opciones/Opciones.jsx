@@ -6,20 +6,10 @@ import Perfil from '../Perfil/Perfil';
 import Privacidad from '../Privacidad/Privacidad';
 
 Modal.setAppElement('#root');
+export const Opciones= ({modalIsOpen, closeModal}) => {
 
-function Opciones() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedTab, setSelectedTab] = useState('Mi cuenta');
   const [editingProfile, setEditingProfile] = useState(null);
-
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
 
   const changeTab = (tab) => {
     setSelectedTab(tab);
@@ -32,11 +22,11 @@ function Opciones() {
 
   return (
     <div>
-      <button onClick={openModal}>Opciones</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Opciones Modal"
+      
       >
         
       <div className='modal-content'>
@@ -91,4 +81,3 @@ function Opciones() {
   );
 }
 
-export default Opciones;
