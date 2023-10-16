@@ -52,6 +52,7 @@
 .infoContainer{
     padding-left: 15px;
     padding-top: 25px;
+    height: 100%;
 }
 
 .description{
@@ -59,9 +60,10 @@
 }
 
 .containerMembers{
+    position:absolute;
+    bottom:0px;
     display:flex;
     flex-direction: row;
-    padding-top: 20px;
     align-items: center;
 }
 

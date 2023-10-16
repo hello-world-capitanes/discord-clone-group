@@ -1,6 +1,6 @@
 import Card from "../Card/Card"
 import "./CardList.css"
-function CardList(){
+function CardList({filtro=""}){
 
     const lista=[
         {
@@ -21,14 +21,27 @@ function CardList(){
             members:1150255,
             onLineMembers:15814917
         },
+        {
+            id:3,
+            header:"https://pbs.twimg.com/media/FvG_1_6XoAEgxAe?format=jpg&name=large",
+            avatar:"https://images.sftcdn.net/images/t_app-icon-m/p/86b6d520-13a9-47ca-be31-6506d248813a/3771955506/honkai-star-rail-download-honkai-star-rail.jpg",
+            name:"Honkai: Star Rail Official",
+            description:"Honkai: Star Rail is a new HoYoverse space fantasy RPG.",
+            members:996008,
+            onLineMembers:273191
+        }
     ]
 
+    const listaFiltrada =  lista.filter((item)=>item.name.toLowerCase().includes(filtro.toLowerCase()))
+
     return(
-        <ul className="lista">
-            {lista.map((item)=>{
-                return <Card datosCard={item} key={item.id}/>
-            })}
-        </ul>
+        <div className="lista-container">
+            <ul className="lista">
+                {listaFiltrada.map((item)=>{
+                    return <Card datosCard={item} key={item.id}/>
+                })}
+            </ul>
+        </div>
     )
 
 }
