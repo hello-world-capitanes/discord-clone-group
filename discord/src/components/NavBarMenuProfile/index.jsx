@@ -1,4 +1,5 @@
 import './style.css'
+import Inbox from '../bandeja-entrada/bandejaEntrada'
 
 export const NavBarMenuProfile =({filterFunction, filterFriendString})=>{
     
@@ -18,7 +19,7 @@ export const NavBarMenuProfile =({filterFunction, filterFriendString})=>{
             </ul>
             <ul className='NavBarMenuServer__nav__leftmenu'>
                 <p>1</p>
-                <p>2</p>
+                <p><Inbox/></p>
                 <p>3</p>
             </ul>
        </nav>
