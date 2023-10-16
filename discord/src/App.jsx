@@ -1,18 +1,17 @@
-import { useState, useContext } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import userData from './assets/userdb.json'
-import Call from './components/Call/Call'
-import { UserContext } from './context/UserContext'
+import { Routes, Route } from 'react-router-dom'
+import Parent from './pages/parent/Parent'
+import ServerDetail from './pages/server/ServerDetail'
 
 function App() {
-  const {user} = useContext(UserContext) 
-  const userFriends = user.friends
+
   return (
-    <>
-      <Call friends={[userFriends[0], userFriends[1]]}/>
-    </>
+    <Routes>
+      <Route path='/' element={<Parent/>} />
+      <Route path='/server/' element={<Parent/>}>
+        <Route path=':serverid' element={<ServerDetail/>} />
+      </Route>
+    </Routes>
   )
 }
 

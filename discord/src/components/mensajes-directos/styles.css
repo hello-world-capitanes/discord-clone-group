@@ -1,0 +1,98 @@
+.direct-messages {
+    width: 240px;
+    background-color: #282b30;
+    color: #99aab5;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px;
+    height: 100vh;
+  }
+  
+  .direct-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .title-messages {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .direct-message p {
+    font-weight: normal;
+    font-size: 13px;
+  }
+  
+  .direct-message:hover {
+    background-color: #40444b;
+    border: 0px solid;
+    border-radius: 4px;
+  }
+  
+  .context-menu {
+    position: absolute;
+    width: 160px;
+    text-align: left;
+    background-color: #1e2124;
+    color: #c7c7c7;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 100;
+  }
+  
+  .context-menu p {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .context-menu p:hover {
+    background-color: #40444b;
+  }
+  
+  .plus-icon {
+    cursor: pointer;
+  }
+  
+  .p-marcar-leido {
+    color: #99aab5;
+  }
+  
+  .hr {
+    border-color: #99aab5;
+  }
+  
+  .avatar-status-container {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .status-icon {
+    position: absolute; 
+    bottom: 0; 
+    right: 8px; 
+    width: 16px;
+    height: 12px;
+  }
+  .status-icon.green {
+    color: #287e29;
+  }
+  
+  .status-icon.gray {
+    color: #99aab5; 
+  }
