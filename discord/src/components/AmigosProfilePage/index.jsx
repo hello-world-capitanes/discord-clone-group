@@ -12,7 +12,7 @@ export const Amigos = ()=>{
     
 
     const filterFriendsHandler =(string)=>{
-        const resultado = user.friends.filter(e=> e.state.toLowerCase().includes(string))
+        const resultado = user.friends.filter(e=> e.state.toLowerCase().includes(string.toLowerCase()))
         
         return resultado 
     }   
