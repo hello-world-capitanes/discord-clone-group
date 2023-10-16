@@ -11,7 +11,7 @@
 }
 
 .containerHeader{
-    height: 175px;
+    height: 250px;
     width: 100%;
     border-radius: 10px 10px 0px 0px;
 }
@@ -25,8 +25,8 @@
 
 .containerAvatar{
     position:absolute;
-    top: 148px;
-    left:2px;
+    top: 120px;
+    left:10px;
     height: 57px;
     width: 57px;
     z-index: 2;
