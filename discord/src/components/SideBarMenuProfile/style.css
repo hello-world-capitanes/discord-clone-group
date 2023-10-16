@@ -1,12 +1,13 @@
 .SideBarMenuServer__container{
-    display: flex;
+    display: grid;
+    grid-template-rows: 5% 15% 50% 20%;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     height: 100vh;
     border: 1px black inset;
     overflow: hidden;
-    padding-left: 20px;
-    padding-top: 10px
+    align-items: center;
+    justify-content: center;
 }
 
 .SideBarMenuServer__container__input >input{
@@ -33,4 +34,34 @@
     text-align: center;
     text-justify: center;
     cursor: pointer;
+}
+
+.SideBarMenuServer__container__listfriends{
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+}
+.SideBarMenuServer__container__listfriends__li{
+    text-align: center;
+    text-justify: center;
+    display:flex;
+    gap: 15px;
+}
+
+.SideBarMenuServer__container__listfriends__li > img {
+    border-radius: 50%;
+}
+
+.SideBarMenuServer__container__userControlls{
+    align-self: end;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.SideBarMenuServer__container__userControlls >ul{
+    display: flex;
+    align-self: center;
+   gap: 10px;
+   cursor: pointer
+
 }

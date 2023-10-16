@@ -1,7 +1,7 @@
 import './style.css'
 
-export const NavBarMenuProfile =()=>{
-
+export const NavBarMenuProfile =({filterFunction, filterFriendString})=>{
+    
 
 
     return (
@@ -11,10 +11,10 @@ export const NavBarMenuProfile =()=>{
                 <li>
                     Amigos
                 </li>
-                <li>En línea</li>
-                <li>Todos</li>
-                <li>Pendiente</li>
-                <li>Añadir Amigo</li>
+                <li style={{backgroundColor: filterFriendString == "connected" ? "#6e7074" : null}} onClick={()=>filterFunction("connected")}>En línea</li>
+                <li style={{backgroundColor: filterFriendString == "" ? "#6e7074" : null}}onClick={()=>filterFunction("")}>  Todos</li>
+                <li style={{backgroundColor: filterFriendString == "Pendiente" ? "#6e7074" : null}}onClick={()=>filterFunction("pendiente")}>Pendiente</li>
+                <li style={{backgroundColor: filterFriendString == "Añadir" ? "#6e7074" : null}}onClick={()=>filterFunction("Añadir")}>Añadir Amigo</li>
             </ul>
             <ul className='NavBarMenuServer__nav__leftmenu'>
                 <p>1</p>

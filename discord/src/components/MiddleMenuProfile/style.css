@@ -2,7 +2,19 @@
 
 .MidlleMenuServerContainer{
     background-color: #36393f ;
-    padding: 20px;
+    padding: 0px;
     color: white
 }
 
+.MidlleMenuServerContainer__input{
+    width: 80%;
+    background-color: #36393f;
+    margin: 20px;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.MidlleMenuServerContainer__input::placeholder{
+    padding: 10px;
+}

@@ -4,11 +4,9 @@ import { useState } from "react"
 /* import { NavBarMenuServer } from "../../components/NavBarMenuServer" */
 import { SideBarMenuProfile } from "../../components/SideBarMenuProfile"
 import { MiddleMenuProfile } from "../../components/MiddleMenuProfile"
-/* import { Amigos } from "../Amigos"
-import { Incio } from "../Inicio"
-import { Tienda } from "../Tienda" */
-
-
+import { Amigos } from "../../components/AmigosProfilePage"
+import { Tienda } from "../../components/TiendaProfilePage"
+import { Incio } from "../../components/InicioProfilePage"
 
 
 export const ProfilePage = ({friends})=>{
@@ -26,7 +24,7 @@ export const ProfilePage = ({friends})=>{
             <section style={{display: "grid", gridTemplateColumns: "15% 95%"}}>
                 <SideBarMenuProfile friends={friends} changeCurrentPage={changeCurrentPage}/>
                 <MiddleMenuProfile>
-                    {/* {currentPage == "Inicio" ? <Incio/> : currentPage == "Tienda" ? <Tienda/> : <Amigos/>} */}
+                     {currentPage == "Inicio" ? <Incio/> : currentPage == "Tienda" ? <Tienda/> : <Amigos />}
                 </MiddleMenuProfile> 
             </section>
             
