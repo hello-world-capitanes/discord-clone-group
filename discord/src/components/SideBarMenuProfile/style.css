@@ -1,6 +1,5 @@
 .SideBarMenuServer__container{
-    display: grid;
-    grid-template-rows: 5% 15% 50% 20%;
+    display: flex;
     flex-direction: column;
     gap: 30px;
     height: 100vh;
@@ -15,7 +14,6 @@
     border-radius: 5px;
     height: 30px;
     width: 12vw;
-
 }
 
 .SideBarMenuServer__container__input >input::placeholder{
