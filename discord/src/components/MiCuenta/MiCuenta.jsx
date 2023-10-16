@@ -1,5 +1,5 @@
 import React, {useState, useEffect,useContext} from 'react';
-import { UserContext } from '../../context/userContext';
+import { UserContext } from '../../context/UserContext';
 import './MiCuenta.css';
 
 const MiCuenta = ({onEditProfileClick}) => {
