@@ -1,0 +1,136 @@
+p{
+    margin:4px;
+}
+
+
+
+.tarjetaUsuario{
+    background-color: #2c2f33;
+    width: 375px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.headerTarjeta{
+    background-color: #70503e;
+    width: 100%;
+    height:70px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.contenedorImagen{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index:2;
+    background-color: #2c2f33;
+    height:100px;
+    width: 100px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.avatarUsuario{
+    height: 87%;
+    width: 87%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.contenedorEstado{
+    position: absolute;
+    bottom:5px;
+    right: 5px;
+    z-index:4;
+    background-color: #2c2f33;
+    height:30px;
+    width: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center; 
+    align-items: center
+}
+
+.indicadorEstadoPerfil{
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+}
+
+.indicadorEstadoPerfil.onLine{
+    background-color: green;
+}
+
+.indicadorEstadoPerfil.ausent{
+    background-color: yellow;
+}
+
+.indicadorEstadoPerfil.off{
+    background-color: red;
+}
+
+.indicadorEstadoPerfil.invisible{
+    background-color: grey;
+}
+
+.contenedorInfo{
+    position: absolute;
+    top:145px;
+    left:28px;
+    background-color: #111214;
+    width: 315px;
+    border-radius: 10px;
+    padding:10px;
+    color: #ffffff;
+}
+
+.contenedorInteractivo{
+    padding: 5px;
+    display:flex;
+    flex-direction: row;
+    background-color: #111214;
+    align-items: center;
+    border-radius: 3px;
+}
+.contenedorInteractivo:hover{
+    background-color: #2c2f33;
+}
+
+.contenedorInteractivo.activo{
+    background-color: #2c2f33;
+}
+
+.iconoIzquierda{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.iconoDerecha{
+    position:absolute;
+    right: 15px;
+    height: 20px;
+    width: 20px;
+}
+.circuloEstado{
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.circuloEstado.onLine{
+    background-color: green;
+}
+
+.circuloEstado.ausent{
+    background-color: yellow;
+}
+
+.circuloEstado.off{
+    background-color: red;
+}

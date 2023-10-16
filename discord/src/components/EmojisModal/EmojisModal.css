@@ -1,0 +1,52 @@
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.18);
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  background-color: #2c2f33;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 308px;
+  position: absolute;
+  top: 250px;
+  left: 580px;
+}
+
+.emoji-elements {
+  font-size: 32px;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.emoji-elements:hover,
+.emoji-elements:active {
+  background-color: #41434a;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.image-elements {
+  width: 85px;
+  border-radius: 8px;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+}
+
+.image-elements:hover,
+.image-elements:active {
+  transform: scale(0.9);
+}
