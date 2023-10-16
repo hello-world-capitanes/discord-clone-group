@@ -3,7 +3,7 @@ import useForm from './useForm'
 import Image from '../Image/Image'
 import { useState, useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
-function FriendSelector() {
+function FriendSelector({isVisible}) {
     const { isSelected, canSelectMore, toSelect, handleOnChangeForm, handleSubmit } = useForm()
     const {user} = useContext(UserContext)
     const [text, setText] = useState("")
@@ -11,6 +11,10 @@ function FriendSelector() {
 
     function handleOnChangeFilter(event) {
         setText(event.target.value)
+    }
+
+    if (!isVisible) {
+        return null;
     }
 
     return (

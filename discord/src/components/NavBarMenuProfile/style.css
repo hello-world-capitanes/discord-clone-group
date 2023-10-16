@@ -34,4 +34,9 @@
     gap:5%;
     justify-content: stretch;
     background-color: #36393f;
+    .button-selector {
+        background-color: #36393f;
+        border: none;
+        cursor: pointer;
+    }
 }
