@@ -1,0 +1,31 @@
+.MidlleMenuServerContainer__li{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    
+}
+
+.MidlleMenuServerContainer__li__connected::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: green;
+    top: 110px;
+    left: 40px;
+    border-radius: 100%;
+    border: inset 2px green
+}
+.MidlleMenuServerContainer__li__messageConnected{
+    display: flex;
+    flex-direction: column;
+}
+
+.MidlleMenuServerContainer__li >li{
+    display: flex;
+    border-bottom: 1px black inset;
+    padding-bottom: 20px;
+    gap: 20px
+}

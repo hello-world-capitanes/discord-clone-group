@@ -17,7 +17,7 @@ const Parent = () => {
     }
 
     const handleGoHome = () => {
-      navigate('/')
+      navigate('/profile')
     }
 
     const user = serverBtn.User;
@@ -46,9 +46,7 @@ const Parent = () => {
         </Button>
         {button}
       </div>
-      <div className='menuPanel'>
-        <MensajesDirectos></MensajesDirectos>
-      </div>
+
       <div className='nestedRoutes'>
         <Outlet />
       </div>

@@ -1,6 +1,7 @@
 import defaultUser from '../assets/userdb.json'
 import { createContext, useState } from "react"
 
+
 const UserContext = createContext({ 
   user: {
     id: '',
