@@ -1,0 +1,44 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; 
+    background: linear-gradient(to bottom, #7289da, #1e44be); 
+    padding: 10px;
+    margin: 30px;
+    font-family: 'Helvetica Neue', sans-serif
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .search-input {
+   
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid #7289da;
+    border-radius: 10px;
+    background-image: url('./search.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  
