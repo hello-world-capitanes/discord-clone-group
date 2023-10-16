@@ -5,6 +5,8 @@ import App from './App.jsx'
 import Modal from 'react-modal';
 import './index.css'
 import { UserContextProvider } from './context/UserContext.jsx'
+import { Provider } from 'react-redux';
+import { store } from './store/store.js'
 
 // Define el elemento raíz de la aplicación
 const rootElement = document.getElementById('root');
@@ -14,10 +16,12 @@ Modal.setAppElement(rootElement);
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UserContextProvider >
-        <App />
-      </UserContextProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <UserContextProvider >
+          <App />
+        </UserContextProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 )
