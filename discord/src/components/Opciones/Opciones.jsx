@@ -4,7 +4,6 @@ import "./opciones.css"
 import MiCuenta from '../MiCuenta/MiCuenta';
 import Perfil from '../Perfil/Perfil';
 import Privacidad from '../Privacidad/Privacidad';
-import { UserContextProvider } from '../../context/userContext';
 
 Modal.setAppElement('#root');
 
