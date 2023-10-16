@@ -1,14 +1,22 @@
+import Call from '../Call/Call'
 
-
-
-
-
-export const Tienda = ()=>{
-
-
-    return (
+export const Tienda = () => {
+  return (
     <>
-        tienda
+      <Call
+        friends={[
+          {
+            id: 1,
+            avatar: 'https://picsum.photos/200',
+            username: 'david',
+          },
+          {
+            id: 2,
+            avatar: 'https://picsum.photos/200',
+            username: 'davidX',
+          },
+        ]}
+      ></Call>
     </>
-    )
+  )
 }
