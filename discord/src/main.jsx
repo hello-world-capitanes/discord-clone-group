@@ -15,7 +15,9 @@ Modal.setAppElement(rootElement);
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <UserContextProvider >
+        <App />
+      </UserContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )

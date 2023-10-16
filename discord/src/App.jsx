@@ -1,6 +1,4 @@
 import './App.css'
-import { useState, useContext } from 'react'
-import { UserContext } from './context/UserContext'
 import { Routes, Route } from 'react-router-dom'
 import Parent from './pages/parent/Parent'
 import ServerDetail from './pages/server/ServerDetail'
