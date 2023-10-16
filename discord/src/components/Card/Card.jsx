@@ -24,9 +24,6 @@ function Card({datosCard}){
                     }}/>
                     <p className='indicadorMiembros'>{datosCard.onLineMembers.toLocaleString('es-ES')} en línea</p>
                     <div className='circulo' style={{
-                        width: '8px',
-                        height: '8px',
-                        borderRadius: '50%',
                         backgroundColor: 'grey',
                     }}/>
                     <p className='indicadorMiembros'>{datosCard.members.toLocaleString('es-ES')} miembros</p>

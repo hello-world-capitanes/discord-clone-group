@@ -29,7 +29,8 @@ function CardList({filtro=""}){
             description:"Honkai: Star Rail is a new HoYoverse space fantasy RPG.",
             members:996008,
             onLineMembers:273191
-        }
+        },
+        
     ]
 
     const listaFiltrada =  lista.filter((item)=>item.name.toLowerCase().includes(filtro.toLowerCase()))

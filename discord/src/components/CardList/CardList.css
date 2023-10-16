@@ -1,11 +1,11 @@
 .lista-container {
-    max-width: 100%; /* Establece el ancho máximo necesario */
-    overflow-x: auto; /* Activa el scroll horizontal cuando sea necesario */
-    white-space: nowrap; /* Evita que los elementos se envuelvan en varias líneas */
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
   }
   
-  .lista {
-    list-style: none;
-    display: flex;
-  }
+.lista {
+  list-style: none;
+  display: flex;
+}
   
