@@ -1,12 +1,13 @@
-
-
+import CabeceraInicio from "../cabecera-inicio/cabecera"
+import CardList from "../CardList/CardList"
 
 export const Incio =()=>{
 
 
     return (
         <>
-            Página de inicio
+            <CabeceraInicio/>
+            <CardList/>
         </>
     )
 }
