@@ -12,8 +12,8 @@
             "id": "652660b49a363cc2679593e1",
             "name": "Le Page",
             "username": "Earline",
-            "state": "busy",
-            "avatar": "http://placehold.it/32x32",
+            "state": "connected",
+            "avatar": "https://picsum.photos/id/237/200/300",
             "email": "earlinepage@crustatia.com",
             "phone": "+34 (825) 441-3410"
           },
@@ -22,7 +22,7 @@
             "name": "Milagros Emerson",
             "username": "Massey",
             "state": "disconnected",
-            "avatar": "http://placehold.it/32x32",
+            "avatar": "https://picsum.photos/200/300?grayscale",
             "email": "masseyemerson@crustatia.com",
             "phone": "+34 (879) 487-2443"
           },
@@ -31,7 +31,7 @@
             "name": "Simmons Rollins",
             "username": "Dale",
             "state": "connected",
-            "avatar": "http://placehold.it/32x32",
+            "avatar": "https://picsum.photos/id/237/200/300",
             "email": "dalerollins@crustatia.com",
             "phone": "+34 (976) 491-2307"
           },
@@ -39,8 +39,8 @@
             "id": "652660b43fb57a10c3c2c5c4",
             "name": "Joni Sawyer",
             "username": "Skinner",
-            "state": "busy",
-            "avatar": "http://placehold.it/32x32",
+            "state": "connected",
+            "avatar": "https://picsum.photos/200/300?grayscale",
             "email": "skinnersawyer@crustatia.com",
             "phone": "+34 (995) 451-2166"
           },
@@ -49,7 +49,7 @@
             "name": "Camille Browning",
             "username": "Trudy",
             "state": "busy",
-            "avatar": "http://placehold.it/32x32",
+            "avatar": "https://picsum.photos/id/237/200/300",
             "email": "trudybrowning@crustatia.com",
             "phone": "+34 (853) 454-3187"
           },
@@ -58,7 +58,7 @@
             "name": "Spears Lowe",
             "username": "Adrian",
             "state": "afk",
-            "avatar": "http://placehold.it/32x32",
+            "avatar": "https://picsum.photos/200/300?grayscale",
             "email": "adrianlowe@crustatia.com",
             "phone": "+34 (986) 432-3842"
           }
