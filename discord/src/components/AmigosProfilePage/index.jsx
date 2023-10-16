@@ -8,11 +8,24 @@ export const Amigos = ()=>{
 
     const {user} = useContext(UserContext)
     const [filterFriendString, setFilterFriendString] = useState("connected")
+    const [searchData, setSearchData] = useState([])
+    const [showTableSearch, setShowTableSearch] = useState(false)
     
-    
+    const searchFriendsHandler = (e)=>{
+        
+        const resultado = filterFriendsHandler(e.target.value)
 
-    const filterFriendsHandler =(string)=>{
-        const resultado = user.friends.filter(e=> e.state.toLowerCase().includes(string.toLowerCase()))
+        setSearchData([...resultado])
+    }
+    const filterFriendsHandler =(string, select)=>{
+        let resultado
+
+        if (select){
+
+            resultado = user.friends.filter(e=> e.state.toLowerCase().includes(string.toLowerCase()))
+        }else {
+            resultado = user.friends.filter(e=> e.name.toLowerCase().includes(string.toLowerCase()) || e.username.toLowerCase().includes(string.toLowerCase()))
+        }
         
         return resultado 
     }   
@@ -20,11 +33,17 @@ export const Amigos = ()=>{
 
     return (
         <>
-            <NavBarMenuProfile filterFriendString={filterFriendString}filterFunction={setFilterFriendString} />
-            <input placeholder="Buscar" className="MidlleMenuServerContainer__input" type="search"/>
+            <NavBarMenuProfile filterFriendString={filterFriendString} filterFunction={setFilterFriendString} />
+            <input onChange={searchFriendsHandler} placeholder="Buscar" className="MidlleMenuServerContainer__input" type="search"/>
+            <div className="MidlleMenuServerContainer__input__tableSearch">
+                {searchData.map(e=> 
+                    (
+                        <strong>{e.name}</strong>
+                    ))}
+            </div>
             <ul className="MidlleMenuServerContainer__li">
-                <span>Conectado - {filterFriendsHandler(filterFriendString).length}</span>
-                {filterFriendsHandler(filterFriendString).map(e=>
+                <span>Conectado - {filterFriendsHandler(filterFriendString, true).length}</span>
+                {filterFriendsHandler(filterFriendString, true).map(e=>
 
                     <li key={e.id}>
                        
