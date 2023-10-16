@@ -1,0 +1,64 @@
+
+.friends-container {
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        .friends {
+            list-style-type: none;
+            display: flex;
+            .friend-element {
+                margin-right: 5px;
+                .image {
+                    border-radius: 50px;
+                    width: 30px;
+                }
+            }
+        }
+        .call-elements {
+            display: flex;
+            .without-border {
+                background-color: #23272a;
+                border: none;
+                cursor: pointer;
+            }
+                .input {
+                    border-radius: 5px;
+                    padding: 10px;
+                    background-color: #36393f;
+                    color:#ffffff;
+                    border: none;
+                }
+        }
+    }
+    .friends-list {
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        .friend-element {
+            margin-right:20px;
+            .image {
+                border-radius: 50px;
+                width: 75px;
+            }
+        }
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        .redondo {
+            margin-left:10px;
+            margin-right:10px;
+            cursor: pointer;
+            background-color: #36393f;
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            &.red {
+                background-color: red;
+            }
+        }
+    }
+
+}

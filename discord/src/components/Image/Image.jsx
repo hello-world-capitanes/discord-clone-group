@@ -1,8 +1,9 @@
-function Image({className, link, title}) {
+import "./index.css"
+function Image({link, title}) {
 
     return (
       <div className="image-container">
-        <img style={{borderRadius:'150px'}} className="image" src={link} alt={title}/>
+        <img className="image" src={link} alt={title}/>
       </div>
     )
   }
