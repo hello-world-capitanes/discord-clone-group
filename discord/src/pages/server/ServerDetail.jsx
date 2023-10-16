@@ -24,17 +24,12 @@ const ServerDetail = () => {
 
     useEffect(() => {
 
-        console.log('selectedServer', selectedServer);
-
         if(selectedServer) {
             setAvatar(selectedServer.avatar);
             setName(selectedServer.name.replace('_', ' '))
         }
 
     }, [selectedServer])
-
-    console.log('primero', server[0])
-    console.log('selected',selectedServer)
 
   return (
     <div className='serverDetail_container'>

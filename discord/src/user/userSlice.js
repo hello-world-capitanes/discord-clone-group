@@ -1,35 +1,61 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+export const fetchUserData = createAsyncThunk('user/fetchUserData', async () => {
+  try {
+    const response = await fetch('../../db.json');
+
+    if(!response.ok) {
+      throw new Error('Something went wrong');
+    }
+
+    const data = await response.json();
+
+    console.log('async data', data.User)
+    return data.User
+  } catch(error) {
+    throw error
+  }
+});
+
 const userSlice = createSlice({
   name: 'user',
   initialState: {
-    id: '',
-    name: '',
-    username: '',
-    avatar: '',
-    email: '',
-    phone: '',
-    state: '',
-    friends: [],
-    servers: []
+    user: {
+      id: '',
+      name: '',
+      username: '',
+      avatar: '',
+      email: '',
+      phone: '',
+      state: '',
+      friends: [],
+      servers: []
+    },
+    status: 'idle',
+    error: null,
   },
   reducers: {
-    setDefaultUser: (state, action) => {
-      const defaultUserData = action.payload; 
-      state.id = defaultUserData.id;
-      state.name = defaultUserData.name;
-      state.username = defaultUserData.username;
-      state.avatar = defaultUserData.avatar;
-      state.email = defaultUserData.email;
-      state.phone = defaultUserData.phone;
-      state.state = defaultUserData.state;
-      state.friends = defaultUserData.friends;
-      state.servers = defaultUserData.servers;
-  }
+  },
+
+  extraReducers: (builder) => {
+    builder
+    .addCase(fetchUserData.pending, (state) => {
+      state.status = 'loding';
+    })
+    .addCase(fetchUserData.fulfilled, (state, action) => {
+      state.status = 'Fulfilled';
+      console.log(action.payload)
+      state.user = action.payload
+    })
+    .addCase(fetchUserData.rejected, (state, action) => {
+      state.status = 'failed';
+      state.error = action.error.message;
+    })
   }
 });
 
 
-export const selectUser = (state) => state.user;
-export const { setDefaultUser } = userSlice.actions;
+export const selectUser = (state) => state.user.user;
+export const selectStatus = (state) => state.user.status;
+export const selectError = (state) => state.user.error;
 export default userSlice.reducer;
