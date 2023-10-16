@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import serverBtn from '../../assets/userdb.json'
 import { Outlet } from 'react-router-dom';
 import Button from '../../components/button/Button';
 import { useNavigate } from 'react-router-dom';
 import discord from '../../assets/discord.svg'
 import MensajesDirectos from '../../components/mensajes-directos/MensajesDirectos';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectUser, fetchUserData, selectError, selectStatus } from '../../user/userSlice';
 
 const Parent = () => {
 
+    const defaultUser = useSelector(selectUser);
+    const showError = useSelector(selectError);
+    const showStatus = useSelector(selectStatus)
+    const dispatch = useDispatch();
     const navigate = useNavigate()
-    const [selectedId, setSelectedId] = useState('')
 
     const handleServerId = (id) => {
-        setSelectedId(id)
         navigate(`/server/${id}`)
     }
 
@@ -20,10 +24,19 @@ const Parent = () => {
       navigate('/profile')
     }
 
-    const user = serverBtn.User;
-    const server = user.servers;
+    useEffect(() => {
+      handleAddDefaultUserData()
+    }, [dispatch])
 
-    const button = server.map((item) => {
+    const handleAddDefaultUserData = () => {
+      dispatch(fetchUserData())
+    }
+
+    console.log('error', showError)
+    console.log('status', showStatus)
+    console.log('def', defaultUser)
+
+    const button = defaultUser.servers.map((item) => {
         return (
             <div key={item.name}>
                 <Button 
@@ -48,6 +61,12 @@ const Parent = () => {
       </div>
 
       <div className='nestedRoutes'>
+        <Button 
+            className={'loginBtn'}
+            onClick={handleAddDefaultUserData}
+          >
+          Login
+        </Button>
         <Outlet />
       </div>
     </main>

@@ -1,0 +1,94 @@
+{"User": 
+    {
+        "id":"1",
+        "name": "nombre",
+        "username": "nombreUsuario",
+        "avatar": "https://www.eluniverso.com/resizer/FB1Rqc1f_LaS7q5J44TB2b-uGb4=/893x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/5TPHTZQOG5HOZAO4GHC52FWJJQ.jpg",
+        "email": "correo@mail.com",
+        "phone": "666555444",
+        "state":"off",
+        "friends": [  
+            {
+            "id": "652660b49a363cc2679593e1",
+            "name": "Le Page",
+            "username": "Earline",
+            "state": "connected",
+            "avatar": "https://picsum.photos/id/237/200/300",
+            "email": "earlinepage@crustatia.com",
+            "phone": "+34 (825) 441-3410"
+          },
+          {
+            "id": "652660b4eda1556f58a9527e",
+            "name": "Milagros Emerson",
+            "username": "Massey",
+            "state": "disconnected",
+            "avatar": "https://picsum.photos/200/300?grayscale",
+            "email": "masseyemerson@crustatia.com",
+            "phone": "+34 (879) 487-2443"
+          },
+          {
+            "id": "652660b4cdcf426b0e7e4c26",
+            "name": "Simmons Rollins",
+            "username": "Dale",
+            "state": "connected",
+            "avatar": "https://picsum.photos/id/237/200/300",
+            "email": "dalerollins@crustatia.com",
+            "phone": "+34 (976) 491-2307"
+          },
+          {
+            "id": "652660b43fb57a10c3c2c5c4",
+            "name": "Joni Sawyer",
+            "username": "Skinner",
+            "state": "connected",
+            "avatar": "https://picsum.photos/200/300?grayscale",
+            "email": "skinnersawyer@crustatia.com",
+            "phone": "+34 (995) 451-2166"
+          },
+          {
+            "id": "652660b4028cfff483973894",
+            "name": "Camille Browning",
+            "username": "Trudy",
+            "state": "busy",
+            "avatar": "https://picsum.photos/id/237/200/300",
+            "email": "trudybrowning@crustatia.com",
+            "phone": "+34 (853) 454-3187"
+          },
+          {
+            "id": "652660b4716a86c103448136",
+            "name": "Spears Lowe",
+            "username": "Adrian",
+            "state": "afk",
+            "avatar": "https://picsum.photos/200/300?grayscale",
+            "email": "adrianlowe@crustatia.com",
+            "phone": "+34 (986) 432-3842"
+          }
+    ],
+        "servers": [
+                {
+                  "id": "6526617ed677d55a040a8334",
+                  "name": "Jillian_Cherry",
+                  "avatar": "https://picsum.photos/200?image=28"
+                },
+                {
+                  "id": "6526617ef8fd980d5a20d2f2",
+                  "name": "Shauna_Copeland",
+                  "avatar": "https://picsum.photos/200?image=4"
+                },
+                {
+                  "id": "6526617e065a4fbe47ef25ca",
+                  "name": "Corinne_Donovan",
+                  "avatar": "https://picsum.photos/200?image=10"
+                },
+                {
+                  "id": "6526617e8276c725869e5374",
+                  "name": "Dale_Mcdowell",
+                  "avatar": "https://picsum.photos/200?image=7"
+                },
+                {
+                  "id": "6526617eefe57624786282ff",
+                  "name": "Roberts_Schultz",
+                  "avatar": "https://picsum.photos/32/32?image=58"
+                }
+              ]
+        }
+}

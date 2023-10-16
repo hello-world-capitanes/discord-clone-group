@@ -70,3 +70,18 @@
     margin: 1rem;
 }
 
+.loginBtn {
+    width: 100px;
+    height: 40px;
+    margin: 1rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--lightGrey);
+    cursor: pointer;
+    color: rgb(229, 227, 227);
+    background-color: var(--black);
+    transition: all 1s ease-out;
+}
+
+.loginBtn:hover {
+    background-color: #7c7d7d;
+}
