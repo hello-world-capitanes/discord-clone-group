@@ -5,16 +5,20 @@ import {FaUserFriends} from 'react-icons/fa'
 import { UserContext } from '../../context/UserContext'
 import { useContext, useState } from 'react'
 import {BiMicrophone} from 'react-icons/bi'
-import { BsMicMute} from 'react-icons/bs'
+import { BsMicMute, BsSoundwave} from 'react-icons/bs'
 import {CgHeadset} from 'react-icons/cg'
 import {FiSettings} from 'react-icons/fi'
 import {TbHeadsetOff} from 'react-icons/tb'
+import {HiPhoneMissedCall} from 'react-icons/hi'
+import {LuPhoneOff} from 'react-icons/lu'
+
 export const SideBarMenuProfile =({friends, changeCurrentPage})=>{
 
     const {user} = useContext(UserContext)
 
     const [micState, setMicState] = useState(true)
     const [headPhoneState, setHeadPhoneState] = useState(true)
+    const [closeCall, setCloseCall] = useState(false)
 
     const changeStateMic = ()=>{
         setMicState(!micState)
@@ -22,6 +26,11 @@ export const SideBarMenuProfile =({friends, changeCurrentPage})=>{
 
     const changeStateHeadPhones = ()=>{
         setHeadPhoneState(!headPhoneState)
+    }
+
+
+    const closeCallFunction = ()=>{
+        setCloseCall(!closeCall)
     }
 
     return (
@@ -51,15 +60,26 @@ export const SideBarMenuProfile =({friends, changeCurrentPage})=>{
         </ul>
 
         <div className='SideBarMenuServer__container__userControlls'>
-            <div>
-                <img style={{borderRadius: "100%"}}width={30} height={30} src={user.avatar}/>
-                <span>{user.name}</span>
+            <div className='SideBarMenuServer__container__userControlls__div'>
+                <span style={{color: closeCall ? "red" : "green"}}>Voz conectada</span>
+                <div>
+                    <BsSoundwave/>
+                    {closeCall ? <LuPhoneOff onClick={closeCallFunction} /> : <HiPhoneMissedCall onClick={closeCallFunction} />}
+                </div>
+                
             </div>
-            <ul>
-                <li>{micState ? <BiMicrophone onClick={changeStateMic} size={20}/> : <BsMicMute onClick={changeStateMic} size={20}/>}</li>
-                <li>{headPhoneState ? <CgHeadset onClick={changeStateHeadPhones} size={20}/> : <TbHeadsetOff onClick={changeStateHeadPhones} size={20}/>}</li>
-                <li><FiSettings size={20}/></li>
-            </ul>
+            <section className='SideBarMenuServer__container__userControlls__section'>
+                <div>
+                    <img style={{borderRadius: "100%"}}width={30} height={30} src={user.avatar}/>
+                    <span>{user.name}</span>
+                </div>
+            
+                <ul>
+                    <li>{micState ? <BiMicrophone onClick={changeStateMic} size={20}/> : <BsMicMute onClick={changeStateMic} size={20}/>}</li>
+                    <li>{headPhoneState ? <CgHeadset onClick={changeStateHeadPhones} size={20}/> : <TbHeadsetOff onClick={changeStateHeadPhones} size={20}/>}</li>
+                    <li><FiSettings size={20}/></li>
+                </ul>
+            </section>
         </div>
     </div>)
 }
