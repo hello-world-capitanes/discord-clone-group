@@ -8,7 +8,6 @@ import { faCircle, faPlus } from '@fortawesome/free-solid-svg-icons'
 import './styles.css'
 
 const MensajesDirectos = () => {
-
   const [contextMenu, setContextMenu] = useState()
 
   const { user } = useContext(UserContext)
@@ -25,15 +24,12 @@ const MensajesDirectos = () => {
     setContextMenu()
   }
   return (
-    <div
-      className='direct-messages'
-      onClick={closeContextMenu}
-    >
-      <div className='title-messages'>
+    <div className="direct-messages" onClick={closeContextMenu}>
+      <div className="title-messages">
         <p>MENSAJES DIRECTOS</p>
         <p>
           <FontAwesomeIcon
-            className='plus-icon'
+            className="plus-icon"
             icon={faPlus}
           ></FontAwesomeIcon>
         </p>
@@ -41,14 +37,14 @@ const MensajesDirectos = () => {
       {mensajesDirectos.map((friends) => (
         <div
           key={friends.id}
-          className='direct-message'
+          className="direct-message"
           onContextMenu={(e) => handleContextMenu(e, friends)}
         >
-          <div className='avatar-status-container'>
+          <div className="avatar-status-container">
             <img
               src={friends.avatar}
               alt={friends.username}
-              className='avatar'
+              className="avatar"
             />
 
             <FontAwesomeIcon
@@ -64,17 +60,17 @@ const MensajesDirectos = () => {
 
       {contextMenu && (
         <div
-          className='context-menu'
+          className="context-menu"
           style={{ top: contextMenu.y, left: contextMenu.x }}
         >
-          <p className='p-marcar-leido'>Marcar como leído</p>
-          <hr className='hr'></hr>
+          <p className="p-marcar-leido">Marcar como leído</p>
+          <hr className="hr"></hr>
           <p>Perfil</p>
           <p>Llamar</p>
           <p>Añadir nota</p>
           <p>Añadir apodo amigo</p>
           <p>Cerrar MD</p>
-          <hr className='hr'></hr>
+          <hr className="hr"></hr>
           <p>Invitar a servidor</p>
           <p>Eliminar amigo</p>
           <p>Bloquear</p>
