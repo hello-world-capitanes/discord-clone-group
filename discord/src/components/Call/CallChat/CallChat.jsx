@@ -44,7 +44,6 @@ function CallChat() {
                     )
                    }
                 </ul>
-                {console.log(mensajes)}
                 <EmojisModal isModalActive={state} setIsModalActive={toggle} initialMode={type} setAddEmoji={addMensaje} />
                 <div className='send-container'>
                     <Button className="redondo"><img src={addLogo} alt="Logo add"/> </Button>
