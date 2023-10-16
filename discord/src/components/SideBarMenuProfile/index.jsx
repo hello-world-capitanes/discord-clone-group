@@ -14,6 +14,9 @@ import { LuPhoneMissed, LuPhoneOff } from 'react-icons/lu'
 
 
 import MensajesDirectos from '../mensajes-directos/MensajesDirectos'
+import {Opciones} from '../Opciones/Opciones'
+
+
 export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
   const { user } = useContext(UserContext)
 
@@ -25,6 +28,17 @@ export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
     setClosedCall(!closedCall)
   }
 
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   const changeStateMic = () => {
     setMicState(!micState)
@@ -100,8 +114,11 @@ export const SideBarMenuProfile = ({ friends, changeCurrentPage }) => {
             )}
           </li>
           <li>
-            <FiSettings style={{cursor:"pointer"}} size={20} />
+            <FiSettings size={20} onClick={openModal}/>
           </li>
+          {modalIsOpen && (
+            <Opciones modalIsOpen={modalIsOpen} closeModal={closeModal} />
+          )}
         </ul>
         </section> 
       </div>
