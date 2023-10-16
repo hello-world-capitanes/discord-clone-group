@@ -6,6 +6,7 @@ import { ProfilePage } from './pages/profilePage'
 import userData from './assets/userdb.json'
 import { UserContext } from './context/UserContext'
 import { useContext } from 'react'
+
 function App() {
 
 
@@ -13,6 +14,7 @@ function App() {
     const {user, changeState} = useContext(UserContext)
 
   return (
+    
     <Routes>
       <Route path='/' element={<Parent/>}>
       <Route path='profile' element={<ProfilePage friends={user.friends}/>}/>
