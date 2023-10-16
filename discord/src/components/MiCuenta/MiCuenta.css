@@ -1,0 +1,46 @@
+.card {
+    width: 1000px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .user-field{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .edit-button{
+    color: white;
+    background-color: blue;
+    margin-left: auto;
+  }
+  .edit-field-button{
+    color: white;
+    background-color: #A2A3AB;
+    margin-left: auto;
+  }
+  
+  /* .edit-button,
+  .edit-field-button {
+    margin-left: auto;
+    background-color: #007bff;
+    color: red;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  } */

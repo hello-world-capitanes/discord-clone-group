@@ -69,4 +69,7 @@
     border-radius: 100%;
     margin: 1rem;
 }
+.opciones{
+    background-color: var(--lightGrey);
+}
 

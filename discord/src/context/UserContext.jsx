@@ -39,10 +39,19 @@ function UserContextProvider({ children }) {
     })
   }
 
+  const changeData = (newState) =>{
+    setUser({
+      ...user,
+      ...newState
+    })
+  }
   const contextValue = { 
     user: user, 
-    changeState: changeState
+    changeState: changeState,
+    changeData: changeData
   }
+
+  
 
 
   return (
