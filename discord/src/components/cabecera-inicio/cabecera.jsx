@@ -1,6 +1,6 @@
 
 import './cabecera.css'
-import lupaImagen from './search.svg'
+
 
 
 function Header () {

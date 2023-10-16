@@ -7,6 +7,8 @@ import discord from '../../assets/discord.svg'
 import MensajesDirectos from '../../components/mensajes-directos/MensajesDirectos';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectUser, fetchUserData, selectError, selectStatus } from '../../user/userSlice';
+import { Incio } from '../../components/InicioProfilePage';
+
 
 const Parent = () => {
 
@@ -68,6 +70,7 @@ const Parent = () => {
           Login
         </Button>
         <Outlet />
+        <Incio />
       </div>
     </main>
   )

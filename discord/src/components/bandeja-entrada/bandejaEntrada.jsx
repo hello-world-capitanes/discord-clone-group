@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Modal from 'react-modal'
 import './bandejaEstilos.css'
-import inbox from './inbox.svg'
+import inbox from './inbox (2).svg'
 
 const Inbox = () => {
     const [modalIsOpen, setModalIsOpen] = useState (false)
@@ -33,7 +33,7 @@ const Inbox = () => {
     const [filter, setFilter] = useState ('para-ti')
 
     return (
-        <div>
+        <div className="body">
             <img 
                 className="inbox-imagen"
                 src={inbox}
@@ -48,9 +48,9 @@ const Inbox = () => {
             >
                 <h2> Bandeja de Entrada</h2>
                 <div>
-                    <button onClick={() => setFilter('para-ti')}> Para ti </button>
-                    <button onClick={() => setFilter('no-leidos')}> No leidos</button>
-                    <button onClick={() => setFilter('menciones')}> Menciones </button>
+                    <button className="boton-parati" onClick={() => setFilter('para-ti')}> Para ti </button>
+                    <button className="boton-noleidos" onClick={() => setFilter('no-leidos')}> No leidos</button>
+                    <button className="boton-menciones" onClick={() => setFilter('menciones')}> Menciones </button>
                 </div>
                 <ul className="message-list">
                     {messages.map((message, index) => {
